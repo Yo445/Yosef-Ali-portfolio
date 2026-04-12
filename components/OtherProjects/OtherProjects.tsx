@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import './otherProjects.scss';
 import AnimatedLettersFast from '../AnimatedLettersFast/AnimatedLettersFast';
+import { OTHER_PROJECTS_DATA } from './otherProjectsData';
 
 const OtherProjects = () => {
   const [letterClass, setLetterClass] = useState('text-animate-fast');
@@ -23,33 +24,43 @@ const OtherProjects = () => {
       </div>
 
       <ul className='other__list'>
-        <li className='other__items'>
-          <div className='other__card'>
-            <div className='other__cardTop'>
-              <svg className='other__cardFolder'>
-                <use href='icons/symbol-defs.svg#icon-folder' />
-              </svg>
-              <div className='other__cardLink'>
-                <a href='https://github.com/Yo445/Angular_ecommerce_Lugar' target='_blank' rel='noreferrer' style={{ marginRight: '1.6rem' }}>
-                  <svg className='other__icon'>
-                    <use href='/icons/symbol-defs.svg#icon-github' />
-                  </svg>
-                </a>
+        {OTHER_PROJECTS_DATA.map((project) => (
+          <li key={project.id} className='other__items'>
+            <div className='other__card'>
+              <div className='other__cardTop'>
+                <svg className='other__cardFolder'>
+                  <use href='icons/symbol-defs.svg#icon-folder' />
+                </svg>
+                <div className='other__cardLink'>
+                  {project.links.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.href}
+                      target='_blank'
+                      rel='noreferrer'
+                      style={{ marginRight: index < project.links.length - 1 ? '1.6rem' : '0' }}
+                    >
+                      <svg className='other__icon'>
+                        <use href={`/icons/symbol-defs.svg#${link.icon}`} />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+              <div className='other__cardBody'>
+                <div className='other__cardBodyHeading'>{project.title}</div>
+                <p className='other__cardBodyDescription'>
+                  {project.description}
+                </p>
+              </div>
+              <div className='other__cardFooter'>
+                <div className='other__tags'>
+                  {project.tags.join(' \u00A0 ')}
+                </div>
               </div>
             </div>
-            <div className='other__cardBody'>
-              <div className='other__cardBodyHeading'>Lugar</div>
-              <p className='other__cardBodyDescription'>
-                An e-commerce web app built with Angular. Features include product listing, shopping cart, dynamic filtering, category navigation, and user interaction. A comprehensive platform demonstrating modern Angular development practices.
-                {' '}
-
-              </p>
-            </div>
-            <div className='other__cardFooter'>
-              <div className='other__tags'> Angular &nbsp; TypeScript &nbsp; RxJS &nbsp; Bootstrap &nbsp; E-commerce</div>
-            </div>
-          </div>
-        </li>
+          </li>
+        ))}
       </ul>
       <span className='sectiontag'>&lt;/section&gt;</span>
     </div>
