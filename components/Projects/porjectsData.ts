@@ -31,7 +31,7 @@ export const PROJECTS_DATA: ProjectData[] = [
       "jest",
       "AI Integration",
     ],
-    image: "/images/wizjobs.png",
+    image: "/images/wizJobs.png",
     links: [
       {
         href: "https://wiz-jobs.com/",
