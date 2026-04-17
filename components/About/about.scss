@@ -282,3 +282,9 @@
         color: #ec4d28;
     }
 }
+.about__image {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px -15px var(--primary);
+}

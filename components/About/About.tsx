@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import AnimatedLettersFast from '../AnimatedLettersFast/AnimatedLettersFast';
 import './about.scss';
+import Image from 'next/image';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate-fast');
@@ -56,7 +57,7 @@ const About = () => {
         <span className='sectiontag'>&lt;/section&gt;</span>
       </div>
       <div className='about__right'>
-        <div className='stage-cube-cont'>
+        {/* <div className='stage-cube-cont'>
           <div className='cubespinner'>
             <div className='face1'>
               <svg className='about__icon'>
@@ -89,8 +90,8 @@ const About = () => {
               </svg>
             </div>
           </div>
-        </div>
-
+        </div> */}
+            <Image src='/images/me.png' alt='about' width={400} height={400} className='about__image' />
       </div>
     </div>
   );

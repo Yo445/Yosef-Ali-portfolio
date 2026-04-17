@@ -13,7 +13,7 @@ const LeftSideBar = () => (
           </a>
         </li>
         <li className='left__linkItems'>
-          <a href='https://linkedin.com/in/youssef-ali' target='_blank' rel='noreferrer' className='left__links'>
+          <a href='https://www.linkedin.com/in/youssef-ali-mamdouh/' target='_blank' rel='noreferrer' className='left__links'>
             <LinkedinIcon width={24} height={24} color='var(--light-slate)' />
           </a>
         </li>

@@ -1,6 +1,4 @@
 // TODO:
  - contacts page
- - add the third project book borrow system
- - add to other projects githb
+ - solve bug in the projects images in case of mobile screen
  - make description for me 
- - add my image to the about me
