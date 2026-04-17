@@ -100,7 +100,7 @@ const Project = () => {
                   <div className={project.id === 2 ? 'project__descriptionContainer project__descriptionContainer1' : 'project__descriptionContainer'}>
                     <p className='project__description'>{project.description}</p>
                     <div className='project__tags'>
-                      {project.tags.join(' \u00A0 ')}
+                      {project.tags?.join(' \u00A0 ')}
                     </div>
                     <div className={project.id === 2 ? 'project__icons project__icons1' : 'project__icons'}>
                       {project.links.map((link, index) => (
@@ -142,7 +142,7 @@ const Project = () => {
                   <div className='project__descriptionContainer'>
                     <p className='project__description'>{project.description}</p>
                     <div className='project__tags'>
-                      {project.tags.join(' \u00A0 ')}
+                      {project.tags?.join(' \u00A0 ')}
                     </div>
                     <div className='project__icons'>
                       {project.links.map((link, index) => (
@@ -208,7 +208,7 @@ const Project = () => {
               </div>
               <div className='projectResp__cardFooter'>
                 <div className='projectResp__tags'>
-                  {project.tags.join(' \u00A0 ')}
+                  {project.tags?.join(' \u00A0 ')}
                 </div>
               </div>
             </div>
