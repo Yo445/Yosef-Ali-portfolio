@@ -8,10 +8,27 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__left">
-        <Link href="/" className="navbar__link">
-          <div className="navbar__img">
-          <YosefLogo width={50} height={50}/>
-          </div>
+        <Link href="/" className="navbar__link"
+        style={{
+                color: "var(--primary)",
+                textShadow: "2px 2px var(--tertiary)",
+                textDecoration:"none",
+                fontSize:"60px",
+                fontWeight:"800"
+              }}
+        >
+          {/* <div className="navbar__img"> */}
+          {/* <YosefLogo width={50} height={50}/> */}
+                      {/* <span
+              style={{
+                color: "var(--primary)",
+                textShadow: "2px 2px var(--tertiary)",
+              }}
+            >
+              Y
+            </span> */}
+          {/* </div> */}
+          Y
         </Link>
       </div>
       <div className="navbar__right">
