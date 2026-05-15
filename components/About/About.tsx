@@ -1,62 +1,52 @@
-'use client';
-import { useEffect, useState } from 'react';
-import AnimatedLettersFast from '../AnimatedLettersFast/AnimatedLettersFast';
-import './about.scss';
-import Image from 'next/image';
+"use client";
+import { useEffect, useState } from "react";
+import AnimatedLettersFast from "../AnimatedLettersFast/AnimatedLettersFast";
+import "./about.scss";
+import Image from "next/image";
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate-fast');
-  const nameArray = [...'01. About Me'];
+  const [letterClass, setLetterClass] = useState("text-animate-fast");
+  const nameArray = [..."01. About Me"];
 
   useEffect(() => {
     setTimeout(() => {
-      setLetterClass('text-animate-fast-hover');
+      setLetterClass("text-animate-fast-hover");
     }, 4000);
   });
   return (
-    <div className='about' id='about'>
-      <div className='about__left'>
-        <span className='sectiontag'>&lt;section&gt;</span>
-        <h1 className='about__headingPrimary'>
-          <AnimatedLettersFast letterClass={letterClass} strArray={nameArray} idx={15} />
+    <div className="about" id="about">
+      <div className="about__left">
+        <span className="sectiontag">&lt;section&gt;</span>
+        <h1 className="about__headingPrimary">
+          <AnimatedLettersFast
+            letterClass={letterClass}
+            strArray={nameArray}
+            idx={15}
+          />
         </h1>
-        <div className='about__description'>
-          Hello! My name is
-          {' '}
-          <span className='about__link'>Yash&nbsp;Falke</span>
-          {' '}
-          and I’m a Front-End Developer located in India and i have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
-          {/* <br />
-          <br /> */}
-          {' '}
-          Well-organised person, problem solver, focused student at
-          {' '}
-          <a href='https://vit.edu.in/' target='_blank' rel='noreferrer' className='intro__link'>VIT-MUMBAI</a>
-          {' '}
-          with high attention to detail. Fan of Gaming esports, outdoor activities, TV series and Japanese anime.
+        <div className="about__description">
+          Hello! My name is <span className="about__link">Youssef Ali</span>{" "}
+          Frontend & Mobile Developer with 2 years of experience building
+          scalable digital products for web and mobile using React.js, Next.js,
+          AngularJS, and React Native. Passionate about creating
+          high-performance, user-centered experiences with strong expertise in
+          UI/UX design using Figma and Adobe Illustrator, combining creativity,
+          clean architecture, and modern product thinking to deliver polished
+          and impactful solutions.
           <br />
-          <br />
-          Here are the few technologies that I&apos;have been working recently:
-          {' '}
-          <br />
-          <ul className='about__skillsList'>
-            <li className='about__skillsItems'>Javascript(ES6+)</li>
-            <li className='about__skillsItems'>Python</li>
-            <li className='about__skillsItems'>Scss / Sass</li>
-            <li className='about__skillsItems'>Nodejs</li>
-            <li className='about__skillsItems'>Expressjs</li>
-            <li className='about__skillsItems'>React.js & Redux</li>
-            <li className='about__skillsItems'>MongoDB</li>
-            <li className='about__skillsItems'>Next.js</li>
-            <li className='about__skillsItems'>Angular</li>
-            <li className='about__skillsItems'>SQL</li>
-            <li className='about__skillsItems'>DSA</li>
-            <li className='about__skillsItems'>AngularJs</li>
+          <ul className="about__skillsList">
+            <li className="about__skillsItems">React.js & React Native</li>
+            <li className="about__skillsItems">Next.js</li>
+            <li className="about__skillsItems">Angular</li>
+            <li className="about__skillsItems">Javascript(ES6+)</li>
+            <li className="about__skillsItems">Python</li>
+            <li className="about__skillsItems">Scss / Sass</li>
+            <li className="about__skillsItems">Nodejs</li>
           </ul>
         </div>
-        <span className='sectiontag'>&lt;/section&gt;</span>
+        <span className="sectiontag">&lt;/section&gt;</span>
       </div>
-      <div className='about__right'>
+      <div className="about__right">
         {/* <div className='stage-cube-cont'>
           <div className='cubespinner'>
             <div className='face1'>
@@ -91,7 +81,13 @@ const About = () => {
             </div>
           </div>
         </div> */}
-            <Image src='/images/me.png' alt='about' width={400} height={400} className='about__image' />
+        <Image
+          src="/images/me.png"
+          alt="about"
+          width={400}
+          height={400}
+          className="about__image"
+        />
       </div>
     </div>
   );
