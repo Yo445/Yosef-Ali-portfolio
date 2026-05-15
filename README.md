@@ -20,11 +20,12 @@ Hello! My name is Youssef Ali and this is my portfolio .Frontend & Mobile Develo
 
 #### Home Page
 
-<img src="./project screenshots/2.png" alt="Logo" >
+<img width="1902" height="947" alt="image" src="https://github.com/user-attachments/assets/ec419d14-c123-4898-95a0-d8f1c2de6f1d" />
+
 
 #### contact page
 
-<img src="./project screenshots/1.png" alt="Logo" >
+<img width="1897" height="965" alt="image" src="https://github.com/user-attachments/assets/1e28a996-2a7d-43dd-a649-954044ac173d" />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
